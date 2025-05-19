@@ -1,0 +1,229 @@
+/* Reset & base */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #222;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    background: #0066cc;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header h1 {
+    font-weight: 700;
+    font-size: 1.7rem;
+  }
+  
+  header button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  header button:hover {
+    background: white;
+    color: #0066cc;
+  }
+  
+  main {
+    flex: 1;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  /* Intro section */
+  .intro {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    align-items: center;
+  }
+  
+  .intro img {
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+  
+  .intro div h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #004a99;
+  }
+  
+  .intro div p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    color: #333;
+  }
+  
+  /* Skills and Goals */
+  .skills-goals {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 60px;
+    justify-content: flex-start;
+  }
+  
+  .skills, .goals {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    width: 480px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .skills h2, .goals h2 {
+    margin-bottom: 20px;
+    color: #0059b3;
+  }
+  
+  .skills ul, .goals ul {
+    list-style-type: none;
+    font-size: 1rem;
+    color: #444;
+    padding-left: 20px;
+  }
+  
+  .skills ul li::before, .goals ul li::before {
+    content: "✔️";
+    margin-right: 10px;
+  }
+  
+  .goals ul li::before {
+    content: "🎯";
+  }
+  
+  .skills:hover, .goals:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+  
+  /* Projects */
+  .projects {
+    margin-bottom: 80px;
+  }
+  
+  .projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #004a99;
+    text-align: center;
+  }
+  
+  .project-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    margin-bottom: 25px;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    gap: 25px;
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  }
+  
+  .project-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+  }
+  
+  .project-card div h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #003366;
+  }
+  
+  .project-card div p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px 10px;
+    background: #0066cc;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background: #121212;
+    color: #eee;
+  }
+  
+  /* Texte secondaire et paragraphes en blanc clair */
+  body.dark-mode p,
+  body.dark-mode ul,
+  body.dark-mode li {
+    color: #eee !important;
+  }
+  
+  /* Si tu as des éléments spécifiques gris clair, on les force aussi */
+  body.dark-mode .skills ul,
+  body.dark-mode .goals ul,
+  body.dark-mode .project-card div p {
+    color: #ddd;
+  }
+  
+  body.dark-mode header {
+    background: #004080;
+  }
+  
+  body.dark-mode header button {
+    border-color: #eee;
+    color: #eee;
+  }
+  
+  body.dark-mode header button:hover {
+    background: #eee;
+    color: #004080;
+  }
+  
+  body.dark-mode .skills, 
+  body.dark-mode .goals,
+  body.dark-mode .project-card {
+    background: #1e1e1e;
+    box-shadow: 0 6px 12px rgba(255,255,255,0.1);
+  }
+  
+  body.dark-mode .intro div h2,
+  body.dark-mode .projects h2,
+  body.dark-mode .skills h2,
+  body.dark-mode .goals h2,
+  body.dark-mode .project-card div h3 {
+    color: #aad8ff;
+  }
+  
