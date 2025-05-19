@@ -55,18 +55,29 @@
     padding: 0 20px;
   }
   
-  /* Intro section */
+  /* Intro section - maintenant en case */
   .intro {
     display: flex;
     gap: 30px;
     margin-bottom: 60px;
     align-items: center;
+    background: white;
+    padding: 30px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   }
   
   .intro img {
-    width: 350px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  
+  .intro div {
+    max-width: 700px;
   }
   
   .intro div h2 {
@@ -77,8 +88,8 @@
   
   .intro div p {
     font-size: 1.1rem;
-    max-width: 600px;
     color: #333;
+    line-height: 1.5;
   }
   
   /* Skills and Goals */
@@ -108,15 +119,6 @@
     font-size: 1rem;
     color: #444;
     padding-left: 20px;
-  }
-  
-  .skills ul li::before, .goals ul li::before {
-    content: "✔️";
-    margin-right: 10px;
-  }
-  
-  .goals ul li::before {
-    content: "🎯";
   }
   
   .skills:hover, .goals:hover {
@@ -184,18 +186,19 @@
     color: #eee;
   }
   
-  /* Texte secondaire et paragraphes en blanc clair */
-  body.dark-mode p,
-  body.dark-mode ul,
-  body.dark-mode li {
+  /* Forcer le texte en blanc clair partout en dark mode */
+  body.dark-mode, 
+  body.dark-mode * {
     color: #eee !important;
   }
   
-  /* Si tu as des éléments spécifiques gris clair, on les force aussi */
-  body.dark-mode .skills ul,
-  body.dark-mode .goals ul,
-  body.dark-mode .project-card div p {
-    color: #ddd;
+  /* Fond et ombres en mode sombre */
+  body.dark-mode .skills, 
+  body.dark-mode .goals,
+  body.dark-mode .project-card,
+  body.dark-mode .intro {
+    background: #1e1e1e !important;
+    box-shadow: 0 6px 12px rgba(255,255,255,0.1) !important;
   }
   
   body.dark-mode header {
@@ -212,18 +215,11 @@
     color: #004080;
   }
   
-  body.dark-mode .skills, 
-  body.dark-mode .goals,
-  body.dark-mode .project-card {
-    background: #1e1e1e;
-    box-shadow: 0 6px 12px rgba(255,255,255,0.1);
-  }
-  
   body.dark-mode .intro div h2,
   body.dark-mode .projects h2,
   body.dark-mode .skills h2,
   body.dark-mode .goals h2,
   body.dark-mode .project-card div h3 {
-    color: #aad8ff;
+    color: #aad8ff !important;
   }
   
